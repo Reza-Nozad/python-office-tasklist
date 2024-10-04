@@ -45,9 +45,6 @@ def Delete_tasklist():
                 print("Die Aufgabenliste ist leer.")
 
 
-
-
-
 def main():
     while True:
         print("\nWas möchten Sie tun?")
@@ -72,7 +69,7 @@ def main():
             break
 
         else:
-            print("Ungültige Wahl. Bitte versuchen Sie es erneut.")
+            print("Ungültige Wahl. Bitte versuchen Sie es erneut!!!")
 
 if __name__ == "__main__":
     main()
