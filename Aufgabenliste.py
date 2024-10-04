@@ -27,6 +27,24 @@ def show_tasklist():
     else:
         print("Deine Aufgabenliste ist leer") 
 
+def Delete_tasklist():
+     if Aufgabe:
+                print("Aktuelle Aufgaben:")
+                for i, task in enumerate(Aufgabe, start=1):
+                    print(f"{i}. {task}")
+                try:
+                    index = int(input("Geben Sie die Nummer der Aufgabe ein, die Sie entfernen möchten: ")) - 1
+                    if 0 <= index < len(Aufgabe):
+                        removed_task = Aufgabe.pop(index)
+                        print(f"Aufgabe '{removed_task}' entfernt.")
+                    else:
+                        print("Ungültige Nummer.")
+                except ValueError:
+                    print("Bitte eine gültige Nummer eingeben.")
+     else:
+                print("Die Aufgabenliste ist leer.")
+
+
 
 
 
@@ -47,21 +65,7 @@ def main():
            show_tasklist()
 
         elif choice == '3':
-            if Aufgabe:
-                print("Aktuelle Aufgaben:")
-                for i, task in enumerate(Aufgabe, start=1):
-                    print(f"{i}. {task}")
-                try:
-                    index = int(input("Geben Sie die Nummer der Aufgabe ein, die Sie entfernen möchten: ")) - 1
-                    if 0 <= index < len(Aufgabe):
-                        removed_task = Aufgabe.pop(index)
-                        print(f"Aufgabe '{removed_task}' entfernt.")
-                    else:
-                        print("Ungültige Nummer.")
-                except ValueError:
-                    print("Bitte eine gültige Nummer eingeben.")
-            else:
-                print("Die Aufgabenliste ist leer.")
+           Delete_tasklist()
 
         elif choice == '4':
             print("Programm beendet.")
