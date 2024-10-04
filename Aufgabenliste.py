@@ -16,28 +16,12 @@ def add_task():
 add_task()
 
 def show_tasklist():
-#     if not Aufgabe:
-#         print("Deine Aufgabenliste ist leer.")
-#     else:
-#         today = datetime.date.today()
-#         for task, due_date in Aufgabe.items():
-#             if due_date:
-#                 days_until_due = (due_date - today).days
-#                 if days_until_due < 3:
 
-#                     # Rot für Aufgaben, die in weniger als 2 Tagen fällig sind
-#                     print(f"\033[91m{task} - Fällig am: {due_date}\033[0m")
-#                 else:
-#                     print(f"{task} - Fällig am: {due_date}")
-#             else:
-#                 print(f"{task} - Kein Fälligkeitsdatum angegeben.")
-# show_tasklist(Aufgabe)
     if Aufgabe:
-        for task in Aufgabe:
-         print(task)
-        for due_date in Aufgabe:
-            print(due_date) 
-       
+        print("Deine Aufgabenliste:")
+        for i, task in enumerate(Aufgabe, start=1):
+           print(f"{i}. {task}")
+          
     else:
         print("Deine Aufgabenliste ist leer") 
 show_tasklist()
