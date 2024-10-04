@@ -19,11 +19,11 @@ def add_task():
 def show_tasklist():
 
     if Aufgabe:
-        
-        print("Deine Aufgabenliste : ")
-        for i, task in enumerate (Aufgabe, start=1):
-            print(f"{i}. {task}")
-            
+        for task in Aufgabe:
+         print(task)
+        for due_date in Aufgabe:
+            print(due_date) 
+       
     else:
         print("Deine Aufgabenliste ist leer") 
 
